@@ -19,19 +19,50 @@ The current code demonstrates how each model functions individually. The goal is
 - Jupyter Notebook installed
 
 ### Instructions
-1. **Clone the Repository**: 
+1. **Navigate to the directory where you want to clone the repository using the cd command. For example:**
+    ```sh
+    cd path/to/your/directory
+    ```
+    
+2. **Use the git clone command followed by the URL of the repository:**: 
    ```sh
-   git clone https://github.com/your-username/landslide-prediction.git
+   git clone https://github.com/misterskye/Predict-and-Locate-California-Landslides.git
    ```
 
-2. **Download the `astar_example_files` Folder**: 
-   Ensure you have the `astar_example_files` folder downloaded to your local machine.
+4. **Start by running the 'Astar_Working' Notebook**: 
+   AWI is a measure used to quantify the moisture content in the soil prior to a significant precipitation event.  
 
-3. **Set Up the Directory**: 
-   Place the `astar_example_files` folder in the directory where you cloned this repository.
+        **Calculating Soil Moisture Anomaly (A*)**
 
-4. **Run the Notebook**: 
-   Open the Jupyter Notebook file and direct the code to your directory containing the `astar_example_files` folder. You can do this by modifying the path variables in the notebook to point to your local directory.
+            1. **Start with a Hydrological Model**:
+               - We use a special model that simulates soil moisture by considering factors like rain and evaporation.
+               - **How It Works**: Think of it like a smart weather forecast that tells us how wet the soil is in different areas over time.
+
+            2. **Establish a Climatological Baseline**:
+               - We calculate the average soil moisture for each day over a long period, usually 15 years.
+               - **Why This Matters**: This gives us an idea of what's normal for soil moisture throughout the year.
+
+            3. **Calculate the Anomaly**:
+               - We find the difference between today's soil moisture and the usual amount for this day.
+               - **Example**: If today’s soil moisture is 7 inches, but the average for this day is 5 inches, the anomaly is 2 inches more.
+
+            4. **Normalize the Anomaly**:
+               - We adjust this difference by considering how much soil moisture usually varies. This gives us a standard measure called A*.
+               - **Why Normalize?**: This helps us compare different places and times fairly. It tells us if today’s moisture is unusually high or
+                   low.
+
+            5. **Determine a Threshold for Landslide Risk**:
+               - Using historical landslide data, we set a threshold for A* that indicates a high risk of landslides.
+               - **How It Helps**: If A* is above this threshold, it means there’s a significant risk of landslides.
+
+            ### Summary
+                - **Step-by-Step**:
+                  1. Use a model to simulate soil moisture.
+                  2. Calculate the average soil moisture for each day over 15 years.
+                  3. Compare today’s soil moisture to this average to find the anomaly.
+                  4. Adjust the anomaly to make it a standard measure (A*).
+                  5. Set a threshold for A* to identify high landslide risk areas.
+
 
 ### Example Path Setup
 In the Jupyter Notebook, update the directory paths as follows:
