@@ -80,4 +80,5 @@ In the Jupyter Notebook, you may need to update the directory paths to point to 
 ## License
 This project is licensed under the MIT License.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13292849.svg)](https://doi.org/10.5281/zenodo.13292849)
 ---
