@@ -1,13 +1,12 @@
-# Final Project 2024
+# Earth Analytics Final Project 2024
 # Landslide Prediction and Monitoring System
 
 ## Overview
 This repository contains the code for a dual model system designed to predict and locate landslides. By integrating predictive modeling techniques with real-time monitoring systems, this approach offers proactive and reactive capabilities to improve landslide risk management and enhance community safety and resilience.
 
 ### Components
-1. **Predictive Model (A\*)**: Modified from the Antecedent Water Index model, this component uses extreme values of modeled soil water to anticipate landslide-inducing rainfall, enhancing prediction accuracy.
-2. **Real-Time Monitoring Model (OPERA)**: This model utilizes various data sources to detect and pinpoint landslide occurrences in near real time, enabling timely warnings and effective response measures.
-3. **OPERA Land Surface Disturbance Alert**: Provides valuable insights into vegetation disturbance trends at a high spatial resolution using data from Landsat and Sentinel-2 satellites.
+1. **Predictive Model (Astar)**: Modified from the Antecedent Water Index model, this component uses extreme values of modeled soil water to anticipate landslide-inducing rainfall, enhancing prediction accuracy.
+2. **Land Surface Disturbance Model (OPERA)**: This model utilizes various data sources to detect and pinpoint landslide occurrences in near real time, enabling timely warnings and effective response measures. Provides valuable insights into vegetation disturbance trends at a high spatial resolution using data from Landsat and Sentinel-2 satellites.
 
 ### Future Development
 The current code demonstrates how each model functions individually. The goal is to develop and automate these models further to provide detailed information on landslide events, including specific dates and precise locations. This advancement will enable more accurate and timely predictions, helping mitigate landslides' risks and impacts on communities.
@@ -28,9 +27,15 @@ The current code demonstrates how each model functions individually. The goal is
    ```sh
    git clone https://github.com/misterskye/Predict-and-Locate-California-Landslides.git
    ```
+3. **Install the Project2024 Environment**
+    The Project2024 environment is included in this repository as an environment.yml file. You can create the environment using conda with the following command:
+    ```sh
+    conda env create -f environment.yml
+    ```
+    This command will create a new environment named Project2024 with all the necessary dependencies.
 
 4. **Start by running the 'Astar_Working' Notebook**: 
-   AWI is a measure used to quantify the moisture content in the soil prior to a significant precipitation event.  
+AWI is a measure used to quantify the moisture content in the soil prior to a significant precipitation event.  
 
         **Calculating Soil Moisture Anomaly (A*)**
 
@@ -63,13 +68,9 @@ The current code demonstrates how each model functions individually. The goal is
                   4. Adjust the anomaly to make it a standard measure (A*).
                   5. Set a threshold for A* to identify high landslide risk areas.
 
+5. **LP DAAC’s OPERA Disturbance Alert leverages satellite data to provide timely and accurate land surface disturbance information--OPERA_Working**
+The LP DAAC's OPERA Disturbance Alert is a powerful tool for monitoring land surface changes. It combines data from Harmonized Landsat and Sentinel-2, providing observations every 2-4 days at a 30-meter resolution. The system identifies changes in vegetation cover and other land surface conditions by comparing current data to historical baselines. Detected disturbances are highlighted through detailed layers such as disturbance status, confidence levels, and duration. 
 
-### Example Path Setup
-In the Jupyter Notebook, update the directory paths as follows:
-```python
-# Example of setting the path to your local directory
-data_directory = "/path/to/your/astar_example_files"
-```
 
 ## License
 This project is licensed under the MIT License.
