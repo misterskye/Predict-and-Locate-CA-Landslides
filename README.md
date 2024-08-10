@@ -80,5 +80,13 @@ In the Jupyter Notebook, you may need to update the directory paths to point to 
 ## License
 This project is licensed under the MIT License.
 
+## References
+Perkins, J. P., Oakley, N. S., Collins, B. D., Corbett, S. C., & Burgess, W. P. (2024). Characterizing the Scale of Regional Landslide Triggering from Storm Hydrometeorology. EGUsphere. https://doi.org/10.5194/egusphere-2024-873
+
+Hansen, M.. OPERA Land Surface Disturbance Alert from Harmonized Landsat Sentinel-2 product (Version 1). 2024, distributed by NASA EOSDIS Land Processes Distributed Active Archive Center, https://doi.org/10.5067/SNWG/OPERA_L3_DIST-ALERT-HLS_V1.001. Accessed 2024-07-30.
+
+National Oceanic and Atmospheric Administration. "Historical Archive." California Nevada River Forecast Center, https://www.cnrfc.noaa.gov/arc_search.php. Accessed 29 July 2024.
+
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13292849.svg)](https://doi.org/10.5281/zenodo.13292849)
 ---
