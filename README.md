@@ -37,39 +37,44 @@ The current code demonstrates how each model functions individually. The goal is
 4. **Start by running the 'Astar_Working' Notebook**: 
 AWI is a measure used to quantify the moisture content in the soil prior to a significant precipitation event.  
 
-        **Calculating Soil Moisture Anomaly (A*)**
+    **Calculating Soil Moisture Anomaly (A*)**
 
-            1. **Start with a Hydrological Model**:
-               - We use a special model that simulates soil moisture by considering factors like rain and evaporation.
-               - **How It Works**: Think of it like a smart weather forecast that tells us how wet the soil is in different areas over time.
+        1. **Start with a Hydrological Model**:
+            - We use a special model that simulates soil moisture by considering factors like rain and evaporation.
+            - **How It Works**: Think of it like a smart weather forecast that tells us how wet the soil is in different areas over time.
 
-            2. **Establish a Climatological Baseline**:
-               - We calculate the average soil moisture for each day over a long period, usually 15 years.
-               - **Why This Matters**: This gives us an idea of what's normal for soil moisture throughout the year.
+        2. **Establish a Climatological Baseline**:
+            - We calculate the average soil moisture for each day over a long period, usually 15 years.
+            - **Why This Matters**: This gives us an idea of what's normal for soil moisture throughout the year.
 
-            3. **Calculate the Anomaly**:
-               - We find the difference between today's soil moisture and the usual amount for this day.
-               - **Example**: If today’s soil moisture is 7 inches, but the average for this day is 5 inches, the anomaly is 2 inches more.
+        3. **Calculate the Anomaly**:
+            - We find the difference between today's soil moisture and the usual amount for this day.
+            - **Example**: If today’s soil moisture is 7 inches, but the average for this day is 5 inches, the anomaly is 2 inches more.
 
-            4. **Normalize the Anomaly**:
-               - We adjust this difference by considering how much soil moisture usually varies. This gives us a standard measure called A*.
-               - **Why Normalize?**: This helps us compare different places and times fairly. It tells us if today’s moisture is unusually high or
+        4. **Normalize the Anomaly**:
+            - We adjust this difference by considering how much soil moisture usually varies. This gives us a standard measure called A*.
+            - **Why Normalize?**: This helps us compare different places and times fairly. It tells us if today’s moisture is unusually high or
                    low.
 
-            5. **Determine a Threshold for Landslide Risk**:
-               - Using historical landslide data, we set a threshold for A* that indicates a high risk of landslides.
-               - **How It Helps**: If A* is above this threshold, it means there’s a significant risk of landslides.
+        5. **Determine a Threshold for Landslide Risk**:
+            - Using historical landslide data, we set a threshold for A* that indicates a high risk of landslides.
+            - **How It Helps**: If A* is above this threshold, it means there’s a significant risk of landslides.
 
-            ### Summary
-                - **Step-by-Step**:
-                  1. Use a model to simulate soil moisture.
-                  2. Calculate the average soil moisture for each day over 15 years.
-                  3. Compare today’s soil moisture to this average to find the anomaly.
-                  4. Adjust the anomaly to make it a standard measure (A*).
-                  5. Set a threshold for A* to identify high landslide risk areas.
+        ### Summary
+            - **Step-by-Step**:
+              1. Use a model to simulate soil moisture.
+              2. Calculate the average soil moisture for each day over 15 years.
+              3. Compare today’s soil moisture to this average to find the anomaly.
+              4. Adjust the anomaly to make it a standard measure (A*).
+              5. Set a threshold for A* to identify high landslide risk areas.
 
 5. **LP DAAC’s OPERA Disturbance Alert leverages satellite data to provide timely and accurate land surface disturbance information--OPERA_Working**
+
 The LP DAAC's OPERA Disturbance Alert is a powerful tool for monitoring land surface changes. It combines data from Harmonized Landsat and Sentinel-2, providing observations every 2-4 days at a 30-meter resolution. The system identifies changes in vegetation cover and other land surface conditions by comparing current data to historical baselines. Detected disturbances are highlighted through detailed layers such as disturbance status, confidence levels, and duration. 
+
+
+### Example Path Setup
+In the Jupyter Notebook, you may need to update the directory paths to point to the location where your data files are stored. This ensures that the notebooks can correctly access and process the necessary input files.
 
 
 ## License
